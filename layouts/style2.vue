@@ -1,4 +1,5 @@
 <template>
+    <!--::::::::::::::::: Header :::::::::::::::::::-->
     <div class="w-full  bg-gray-100  h-auto bg-no-repeat bg-cover">
         <header class="w-full h-full relative ">
             <nav x-data="{ open: false }" class=" bg-white border-b border-gray-100 shadow ">
@@ -53,4 +54,9 @@
             </nav>
         </header>
     </div>
+
+    <slot />
+    
+    <!--::::::::::::::::: Footer :::::::::::::::::::-->
+    <Footer />
 </template>

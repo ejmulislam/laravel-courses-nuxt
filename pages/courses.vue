@@ -1,5 +1,9 @@
 <template>
-    <CoursesHeader />
     <CourseBox />
-    <Footer />
 </template>
+
+<script>
+definePageMeta({
+  layout: "style2",
+});
+</script>
