@@ -19,7 +19,7 @@
                 </a>
                 <div class="px-6 pb-5">
                     <div class="mt-7 flex justify-between items-center gap-4 mb-4">
-                        <a href="/" class="text-lg-primary w-full hover:underline">PEST Driven Laravel</a>
+                        <a href="/" class="text-lg-primary w-full hover:underline"> Course name</a>
                     </div>
 
                     <div>
@@ -399,5 +399,11 @@
                 </button>
             </a>
         </div>
+        {{ course }}
     </section>
 </template>
+<script>
+export default {
+    props: ['course'],
+}
+</script>

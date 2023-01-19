@@ -1,6 +1,6 @@
 <template>
     <!-- :::::::::::: Feature Courses :::::::::::: -->
-    <CourseBox />
+    <CourseBox course="test"/>
     
     <!-- :::::::::::: Newslatter :::::::::::: -->
     <div class="w-full bg-update bg-no-repeat bg-cover lg:h-[400px] py-10 lg:py-0">
@@ -28,4 +28,10 @@
             </div>
         </div>
     </div>
+    {{ courses }}
 </template>
+
+
+<script setup>
+const courses = await $fetch('http://localhost:8000/api/courses');
+</script>
