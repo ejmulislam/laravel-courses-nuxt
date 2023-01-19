@@ -28,4 +28,12 @@
             </div>
         </div>
     </div>
+    {{ courses }}
 </template>
+
+
+<script setup>
+const {data:courses} = await useFetch('http://127.0.0.1:8000/api/courses');
+console.log('courses');
+
+</script>
