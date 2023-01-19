@@ -33,5 +33,5 @@
 
 
 <script setup>
-const courses = await $fetch('http://localhost:8000/api/courses');
+const courses = await $fetch('http://laravelcourse.test:8000/api/courses');
 </script>
