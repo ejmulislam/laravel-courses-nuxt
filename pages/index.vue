@@ -28,10 +28,4 @@
             </div>
         </div>
     </div>
-    {{ courses }}
 </template>
-
-
-<script setup>
-const courses = await $fetch('http://laravelcourse.test:8000/api/courses');
-</script>
