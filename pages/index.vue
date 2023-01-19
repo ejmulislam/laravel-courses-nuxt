@@ -33,7 +33,6 @@
 
 
 <script setup>
-const {data:courses} = await useFetch('http://127.0.0.1:8000/api/courses');
-console.log('courses');
+const courses = await $fetch('http://localhost/laravel-courses/public/api/courses');
 
 </script>
