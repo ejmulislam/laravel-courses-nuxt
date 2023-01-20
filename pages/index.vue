@@ -1,6 +1,28 @@
 <template>
-    <!-- :::::::::::: Feature Courses :::::::::::: -->
-    <CourseBox course="test"/>
+    <!-- ::::::::::::|Featured Courses|:::::::::::: -->
+    <section class="mt-20 lg:mt-[140px]">
+        <h1 class="heading-tertiory text-center mb-10 md:mb-16">
+            Featured Courses
+        </h1>
+
+        <!-- ::::::::::::card:::::::::::: -->
+        <div class="max-w-[400px] sm:max-w-[700px] lg:max-w-7xl w-full sm:px-6 lg:px-8 mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10">
+            <!-- :::::::::::: Feature Courses :::::::::::: -->
+            <CourseBox 
+                v-for="course in courses"
+                :key="course.id" 
+                :course="course" 
+            />
+        </div>
+
+        <div class="flex justify-center mt-12 mb-12">
+            <a href="https://laravel-courses.com/courses">
+                <button class="btn-primary max-w-[160px] w-full h-14 lg:w-32">
+                    Browse all
+                </button>
+            </a>
+        </div>
+    </section>
     
     <!-- :::::::::::: Newslatter :::::::::::: -->
     <div class="w-full bg-update bg-no-repeat bg-cover lg:h-[400px] py-10 lg:py-0">
@@ -28,11 +50,9 @@
             </div>
         </div>
     </div>
-    {{ courses }}
 </template>
 
 
 <script setup>
-const courses = await $fetch('http://localhost/laravel-courses/public/api/courses');
-
+const courses = await $fetch(`${process.env.BASE_URL}/courses/`);
 </script>
